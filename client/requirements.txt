@@ -1,0 +1,4 @@
+requests
+python-csv
+regex
+webvtt-py
