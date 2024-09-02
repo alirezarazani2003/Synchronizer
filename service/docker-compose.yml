@@ -1,0 +1,15 @@
+version: '3'
+services:
+  fastapi-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5223:5223"
+    environment:
+      - UVICORN_CMD=uvicorn main:app --host 0.0.0.0 --port 5223 --reload
+    networks:
+      - my-network
+
+networks:
+  my-network:
